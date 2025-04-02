@@ -14,14 +14,7 @@ In this mini-project, you will:
 - Perform real-time aggregations by driver ID and time windows.
 - Output results to CSV in a structured folder format.
 
----
-
-
-
----
-
-
-## ▶️ How to Run the Project
+##  How to Run the Project
 
  Open two terminals in your workspace.
  Before starting the assignment, ensure the following tools are installed:
@@ -44,7 +37,16 @@ In this mini-project, you will:
      ```bash
      pip install faker
 
-### Terminal 1 (start the data stream):
+     ### **2. Running the Tasks**
+
+Run each script in a separate terminal after starting the simulator.
+
+```bash
+python task1.py
+python task2.py
+python task3.py
+
+### **Terminal 1**  (start the data stream):
 python data_generator.py
 
 Task 1: Ingest & Parse Streaming Data
@@ -56,15 +58,29 @@ Parse incoming JSON strings into structured format.
 Save parsed batches to CSV.
 
 **Command**:
+
 python task1.py
 
+## **Dataset Structure (Simulated)**
+
+| Field        | Type    | Description                        |
+|--------------|---------|------------------------------------|
+| trip_id      | String  | Unique ID for each ride            |
+| driver_id    | String  | ID of the driver                   |
+| distance_km  | Float   | Trip distance in kilometers        |
+| fare_amount  | Float   | Total fare for the trip            |
+| timestamp    | String  | Ride start time (YYYY-MM-DD HH:MM:SS) |
+
+
 **Output**:
-CSV files will be saved in: output/task1_csv/batch_X/
-----------------------------------------------------------------------------------------------------
-| trip_id                               | driver_id        | distance_km  | fare_amount  | timestamp|
-----------------------------------------------------------------------------------------------------
-| fc98e95e-c47e-453c-8b99-35070c849bcc  |  5,40.97         | 113.2        | 2025-04-01   |18:50:13  |
------------------------------------------------------------------------------------------------------
+
+CSV files will be saved in:output/task1_csv/batch_X/
+
++---------------------------------------+-------------------+--------------+-------------+---------------+
+| trip_id                               | driver_id        | distance_km  | fare_amount  | timestamp    |
++---------------------------------------+-----------------+---------------+--------------+---------------|
+| fc98e95e-c47e-453c-8b99-35070c849bcc  |  5,40.97         | 113.2        | 2025-04-01   |18:50:13        |
++---------------------------------------+-----------------+---------------+--------------+----------------+ 
 
 
 
